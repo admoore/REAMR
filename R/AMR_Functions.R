@@ -5,12 +5,6 @@ require(rgdal)
 require(dplyr)
 require(rjson)
 
-#This is our Google Developer API Key.
-google_key = 'AIzaSyDR7sy8vUW$JyCLl2aO11g_Ed7Ucai3yjms'
-
-#This loads the census api key into the tidycensus package
-census_api_key(key="6eb1241e8afc1c6cc240dffb32afc08c0ce32627")
-
 maps_zipcode_CA<-function(latitude,longitude){
   location<-c(latitude,longitude)
   output<-google_reverse_geocode(location,key='AIzaSyDR7sy8vUWJyCLl2aO11g_Ed7Ucai3yjms')
